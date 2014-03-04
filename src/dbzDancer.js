@@ -1,4 +1,3 @@
-//var count = 0;
 var DBZDancer = function(top, left, timeBetweenSteps){
   Dancer.call(this, top, left, timeBetweenSteps);
   this.$node = $('<span class="fightingDancer"></span>');
@@ -22,12 +21,10 @@ DBZDancer.prototype.constructor = DBZDancer;
 
 DBZDancer.prototype.step = function(){
   Dancer.prototype.step.call(this);
-///count++;
-
-//this.$node.css('background-position-x', count*60);
 
 this.$node.css('background-position-x', function(index, value){
-  return (value * 60) + 'px';
+  value = parseInt(value);
+  return (value += 60) + 'px';
 });
 
 
