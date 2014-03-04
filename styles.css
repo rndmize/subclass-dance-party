@@ -2,12 +2,20 @@ body, html{
   height:100%;
 }
 body{
+  position: static;
   margin: 0px;
-  background-color:#444;
+  background-color: black;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
+}
+.wrapper {
+  position: relative;
+  margin: 0px auto;
+  width: 1400px;
+  background: url(src/dancefloor.jpg) no-repeat;
+  height: 100%;
 }
 .title, .addDancerButton{
   padding:5px 12px;
@@ -26,11 +34,25 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 .fightingDancer{
-  display: block-inline;
-  width: 100px;
-  height: 100px;
-  border: 2px solid #aaf;
-  background-position: 120px 120px;
-  background-image: url(src/dbzSprite.gif);
+  position: absolute;
+  top: 700px;
+  left: 500px;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-position: top left 128px 92px;
+  background-image: url('src/pingo.jpg');
+
+}
+
+.ninjaDancer{
+  position: absolute;
+  top: 700px;
+  left: 300px;
+  display: inline-block;
+  width: 50px;
+  height: 82px;
+  background-position: top left 128px 92px;
+  background-image: url('src/ninjaSprite.png');
 
 }
