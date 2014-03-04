@@ -41,7 +41,19 @@ body, a:link, a:visited, a:active{
   width: 60px;
   height: 60px;
   background-position: top left 128px 92px;
-  background-image: url('src/pingo.jpg');
+  background-image: url('src/pingo2.png');
+
+}
+
+.twitterDancer{
+  position: absolute;
+  top: 700px;
+  left: 500px;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-position: top left 128px 92px;
+  background-image: url('src/twitter-bird-sprite.png');
 
 }
 
@@ -50,9 +62,9 @@ body, a:link, a:visited, a:active{
   top: 700px;
   left: 300px;
   display: inline-block;
-  width: 50px;
-  height: 82px;
-  background-position: top left 128px 92px;
-  background-image: url('src/ninjaSprite.png');
+  width: 151px;
+  height: 200px;
+  background-position: top left 0px 560px;
+  background-image: url('src/ninjaSprite2.png');
 
 }

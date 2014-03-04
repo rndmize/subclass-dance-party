@@ -1,18 +1,15 @@
-var DBZDancer = function(top, left, timeBetweenSteps){
+var twitterDancer = function(top, left, timeBetweenSteps){
   Dancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<span class="fightingDancer"></span>');
+  this.$node = $('<span class="twitterDancer"></span>');
   this.setPosition(300 + Math.random() * 500, left);
 
   //set timeout
   var that = this.$node;
   this.$node.on('mouseenter', function(event) {
     this.idd = setInterval(function(){
-      that.css('top', function(index, value) {
+      that.css('left', function(index, value) {
         var newValue = parseInt(value);
-        return (newValue - 10) + 'px';
-      }).css('background-position-y', function(index, value) {
-        var newValue = parseInt(value);
-        return (newValue + 60) + 'px';
+        return (newValue + 10) + 'px';
       });
     }, 25);
   }).on('mouseleave', function(){
@@ -21,16 +18,16 @@ var DBZDancer = function(top, left, timeBetweenSteps){
 
 };
 
-DBZDancer.prototype = Object.create(Dancer.prototype);
-DBZDancer.prototype.constructor = DBZDancer;
+twitterDancer.prototype = Object.create(Dancer.prototype);
+twitterDancer.prototype.constructor = twitterDancer;
 
 
-DBZDancer.prototype.step = function(){
+twitterDancer.prototype.step = function(){
   Dancer.prototype.step.call(this);
 
 this.$node.css('background-position-x', function(index, value){
   value = parseInt(value);
-  return (value += 60) + 'px';
+  return (value += 150) + 'px';
 });
 
 

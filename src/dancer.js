@@ -19,19 +19,43 @@ Dancer.prototype.step = function(){
   setTimeout(function() {
     context.step();
   }, this.timeBetweenSteps);
+
+  // var d = window.dancers;
+  // var result1;
+  // var result2;
+  // for(var i=0; i<d.length; i++){
+  //   for (var j = 0; j < d.length; j++) {
+  //     if (d[i].$node.hasClass('twitterDancer') && d[j].$node.hasClass('fightingDancer')) {
+  //       if(parseInt(d[i].$node.css('background-position-x')) - parseInt(d[j].$node.css('background-position-x')) < 20 && parseInt(d[i].$node.css('background-position-y')) - parseInt(d[j].$node.css('background-position-y')) < 20) {
+  //         result1 = i;
+  //         result2 = j;
+
+  //         console.log("in the zone");
+  //         $("wrapper").remove(d[i].$node);
+  //         dancers.splice(i,1);
+  //       }
+  //     }
+  //   }
+  // }
 };
 
 Dancer.prototype.setPosition = function(top, left){
   // Use css top and left properties to position our <span> tag
   // where it belongs on the page. See http://api.jquery.com/css/
   //
-  var styleSettings = {
-    top: top,
-    left: left
-  };
+  if (top !== null) {
+    var styleSettings = {
+      top: top,
+      left: left
+    };
+  } else {
+    var styleSettings = {
+      left: left
+    };
+  }
   this.$node.css(styleSettings);
 };
 
 Dancer.prototype.lineUp = function(){
-  this.setPosition(Math.random() * 400, 100);
+  this.setPosition(null, 100);
 };
