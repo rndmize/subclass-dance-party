@@ -16,26 +16,26 @@ Dancer.prototype.step = function(){
     context.step();
   }, this.timeBetweenSteps);
 
-/*
+  /*
   // Here we tried unsuccessfully to add explosions (when twitterBird & bird got close to each other)
   var d = window.dancers;
-  var result1;
-  var result2;
+  var overlappingBirds = [];
   for(var i=0; i<d.length; i++){
     for (var j = 0; j < d.length; j++) {
       if (d[i].$node.hasClass('twitterDancer') && d[j].$node.hasClass('fightingDancer')) {
-        if(parseInt(d[i].$node.css('background-position-x')) - parseInt(d[j].$node.css('background-position-x')) < 20 && parseInt(d[i].$node.css('background-position-y')) - parseInt(d[j].$node.css('background-position-y')) < 20) {
-          result1 = i;
-          result2 = j;
-
-          // console.log("in the zone");
+        if(parseInt(d[i].$node.css('top')) - parseInt(d[j].$node.css('top')) < 50 && parseInt(d[i].$node.css('left')) - parseInt(d[j].$node.css('left')) < 50) {
+          d[i].$node.remove();
+          // d.splice(i,1);
+          //overlappingBirds.push[i];
+          //overlappingBirds.push[j];
+          console.log("in the zone");
           // $("wrapper").remove(d[i].$node);
           // dancers.splice(i,1);
         }
       }
     }
   }
-*/
+  */
 };
 
 Dancer.prototype.setPosition = function(top, left){
