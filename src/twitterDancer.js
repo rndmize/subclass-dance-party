@@ -3,9 +3,8 @@ var twitterDancer = function(top, left, timeBetweenSteps){
   this.$node = $('<span class="twitterDancer"></span>');
   this.setPosition(300 + Math.random() * 500, left);
 
-  //set timeout
   var that = this.$node;
-  this.$node.on('mouseenter', function(event) {
+  this.$node.on('mouseenter', function(event) { //move on mouseover
     this.idd = setInterval(function(){
       that.css('left', function(index, value) {
         var newValue = parseInt(value);
@@ -25,7 +24,7 @@ twitterDancer.prototype.constructor = twitterDancer;
 twitterDancer.prototype.step = function(){
   Dancer.prototype.step.call(this);
 
-this.$node.css('background-position-x', function(index, value){
+this.$node.css('background-position-x', function(index, value){ //basic sprite animation
   value = parseInt(value);
   return (value += 150) + 'px';
 });

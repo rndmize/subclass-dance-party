@@ -33,7 +33,7 @@ $(document).ready(function(){
       50
     );
     window.dancers.push(dancer);
-    $('.wrapper').append(dancer.$node);
+    $('.wrapper').append(dancer.$node); //"wrapper" contains the image of the dance area
   });
 
 });

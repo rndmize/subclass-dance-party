@@ -9,7 +9,7 @@ NinjaDancer.prototype.constructor = NinjaDancer;
 
 NinjaDancer.prototype.step = function(){
   Dancer.prototype.step.call(this);
-  this.$node.css('background-position-x', function(index, value){
+  this.$node.css('background-position-x', function(index, value){ //looped sprite animation
     value = parseInt(value);
     if (value > 800) {
       value = 30;
